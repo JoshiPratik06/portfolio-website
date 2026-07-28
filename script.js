@@ -1,78 +1,59 @@
-// script.js
+document.addEventListener('DOMContentLoaded', () => {
+  if (window.lucide) window.lucide.createIcons();
 
-// Navigation Active Link
-const navLinks = document.querySelectorAll('.nav-link');
-const sections = document.querySelectorAll('section[id]');
+  const navbar = document.querySelector('.navbar');
+  const menuButton = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('.nav-menu');
+  const navLinks = [...document.querySelectorAll('.nav-link')];
+  const sections = [...document.querySelectorAll('main section[id]')];
 
-window.addEventListener('scroll', () => {
-    let current = '';
-    
+  const getCurrentSectionId = () => {
+    let currentId = sections[0]?.id;
+    const scrollPosition = window.scrollY + 130;
+
     sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        
-        if (scrollY >= sectionTop - 200) {
-            current = section.getAttribute('id');
-        }
+      if (scrollPosition >= section.offsetTop) {
+        currentId = section.id;
+      }
     });
 
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').slice(1) === current) {
-            link.classList.add('active');
-        }
-    });
-});
+    return currentId;
+  };
 
-// Smooth Scroll for Navigation
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    });
-});
+  const updateNavigation = () => {
+    navbar?.classList.toggle('scrolled', window.scrollY > 16);
+    const current = getCurrentSectionId();
+    navLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === `#${current}`));
+  };
 
-// Intersection Observer for Animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
-};
+  window.addEventListener('scroll', updateNavigation, { passive: true });
+  updateNavigation();
 
-const observer = new IntersectionObserver((entries) => {
+  menuButton?.addEventListener('click', () => {
+    const isOpen = navMenu?.classList.toggle('open');
+    menuButton.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  navLinks.forEach(link => link.addEventListener('click', () => {
+    navMenu?.classList.remove('open');
+    menuButton?.setAttribute('aria-expanded', 'false');
+  }));
+
+  const revealItems = document.querySelectorAll('.reveal');
+
+  if (typeof IntersectionObserver === 'undefined') {
+    revealItems.forEach(item => item.classList.add('visible'));
+    return;
+  }
+
+  const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
-            observer.unobserve(entry.target);
-        }
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
     });
-}, observerOptions);
+  }, { threshold: 0.14 });
 
-document.querySelectorAll('.project-card, .skill-card, .contact-card').forEach(el => {
-    el.style.opacity = '0';
-    observer.observe(el);
+  revealItems.forEach(item => observer.observe(item));
 });
-
-// Hamburger Menu
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
-
-if (hamburger) {
-    hamburger.addEventListener('click', () => {
-        navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
-        hamburger.classList.toggle('active');
-    });
-}
-
-// Parallax Effect
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero');
-    if (hero) {
-        hero.style.backgroundPosition = `center ${scrolled * 0.5}px`;
-    }
-});
-
-console.log('Portfolio loaded successfully!');

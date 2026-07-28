@@ -3,295 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pratik Joshi — Full Stack Java Developer</title>
-    <meta name="description" content="Full Stack Java Developer Portfolio">
+    <meta name="description" content="Portfolio of Pratik Joshi, Full Stack Java Developer.">
+    <meta name="theme-color" content="#101411">
+    <title>Pratik Joshi | Full Stack Java Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <nav class="navbar" aria-label="Primary navigation">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo" aria-label="Pratik Joshi, home">PJ<span>.</span></a>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#about" class="nav-link">About</a>
+            </div>
+            <a href="#contact" class="nav-contact">Let's talk <i data-lucide="arrow-up-right"></i></a>
+            <button class="hamburger" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu"><span></span><span></span></button>
+        </div>
+    </nav>
 
-<!-- Navigation -->
-<nav class="navbar">
-    <div class="nav-container">
-        <a href="#home" class="nav-logo">PJ.</a>
-        <div class="nav-menu">
-            <a href="#home" class="nav-link active">Home</a>
-            <a href="#projects" class="nav-link">Projects</a>
-            <a href="#skills" class="nav-link">Skills</a>
-            <a href="#contact" class="nav-link">Contact</a>
-        </div>
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </div>
-</nav>
-
-<!-- Hero Section -->
-<section id="home" class="hero">
-    <div class="hero-content">
-        <div class="hero-text">
-            <span class="hero-badge">Welcome to my portfolio</span>
-            <h1 class="hero-title">
-                <span class="word">Building</span>
-                <span class="word">Scalable</span>
-                <span class="word">Web</span>
-                <span class="word">Solutions</span>
-            </h1>
-            <p class="hero-subtitle">
-                Full Stack Java Developer crafting responsive applications with modern technologies
-            </p>
-            <div class="hero-cta">
-                <a href="#projects" class="btn btn-primary">View My Work</a>
-                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-            </div>
-            <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-number">2+</span>
-                    <span class="stat-label">Projects</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">1+</span>
-                    <span class="stat-label">Years</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">6</span>
-                    <span class="stat-label">Skills</span>
-                </div>
-            </div>
-        </div>
-        <div class="hero-visual">
-            <div class="avatar-container">
-                <img src="PP.png" alt="Pratik Joshi" class="avatar-img">
-                <div class="avatar-ring"></div>
-                <div class="avatar-glow"></div>
-            </div>
-        </div>
-    </div>
-    <div class="scroll-indicator">
-        <span>Scroll to explore</span>
-        <div class="mouse"></div>
-    </div>
-</section>
-
-<!-- Projects Section -->
-<section id="projects" class="projects">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-badge">Featured Work</span>
-            <h2>My Projects</h2>
-            <p>Showcasing my latest and greatest creations</p>
-        </div>
-
-        <!-- Project 1 -->
-        <div class="project-card">
-            <div class="project-image">
-                <img src="photo.png" alt="2D Car Racing Game">
-                <div class="project-overlay">
-                    <a href="https://joshipratik06.github.io/2dmobiledestop/" target="_blank" class="project-link">Live Demo</a>
-                </div>
-            </div>
-            <div class="project-content">
-                <div class="project-tags">
-                    <span class="tag">HTML5</span>
-                    <span class="tag">CSS3</span>
-                    <span class="tag">JavaScript</span>
-                </div>
-                <h3>2D Car Racing Game</h3>
-                <p>
-                    Interactive browser-based racing game featuring dynamic obstacle generation, 
-                    multiple difficulty levels, and responsive gameplay for desktop and mobile devices.
-                </p>
-                <div class="project-links">
-                    <a href="https://joshipratik06.github.io/2dmobiledestop/" target="_blank" class="link-btn">Live Demo</a>
-                    <a href="https://github.com/JoshiPratik06/2dmobiledestop" target="_blank" class="link-btn outline">Source Code</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="project-card">
-            <div class="project-image">
-                <img src="Tandoori Tales.png" alt="Tandoori Tales">
-                <div class="project-overlay">
-                    <a href="https://pratik-restaurants.vercel.app/" target="_blank" class="project-link">Live Demo</a>
-                </div>
-            </div>
-            <div class="project-content">
-                <div class="project-tags">
-                    <span class="tag">HTML5</span>
-                    <span class="tag">CSS3</span>
-                    <span class="tag">JavaScript</span>
-                </div>
-                <h3>Tandoori Tales</h3>
-                <p>
-                    Modern restaurant web application with responsive design, interactive UI components, 
-                    and seamless browsing experience showcasing services and menu.
-                </p>
-                <div class="project-links">
-                    <a href="https://pratik-restaurants.vercel.app/" target="_blank" class="link-btn">Live Demo</a>
-                    <a href="https://github.com/JoshiPratik06/PratikRestaurants.git" target="_blank" class="link-btn outline">Source Code</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Skills Section -->
-<section id="skills" class="skills">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-badge">What I Know</span>
-            <h2>Technical Skills</h2>
-            <p>Technologies I work with daily</p>
-        </div>
-
-        <div class="skills-grid">
-            <div class="skill-card">
-                <div class="skill-icon">J</div>
-                <h4>Java</h4>
-                <p>Backend development</p>
-                <div class="skill-bar">
-                    <div class="skill-fill" style="width: 85%"></div>
-                </div>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">S</div>
-                <h4>Spring Boot</h4>
-                <p>Framework & APIs</p>
-                <div class="skill-bar">
-                    <div class="skill-fill" style="width: 80%"></div>
-                </div>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">H</div>
-                <h4>HTML5</h4>
-                <p>Semantic markup</p>
-                <div class="skill-bar">
-                    <div class="skill-fill" style="width: 90%"></div>
-                </div>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">C</div>
-                <h4>CSS3</h4>
-                <p>Advanced styling</p>
-                <div class="skill-bar">
-                    <div class="skill-fill" style="width: 92%"></div>
-                </div>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">J</div>
-                <h4>JavaScript</h4>
-                <p>Interactive features</p>
-                <div class="skill-bar">
-                    <div class="skill-fill" style="width: 88%"></div>
-                </div>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">M</div>
-                <h4>MySQL</h4>
-                <p>Database design</p>
-                <div class="skill-bar">
-                    <div class="skill-fill" style="width: 82%"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- About Section -->
-<section class="about">
-    <div class="container">
-        <div class="about-content">
-            <div class="about-text">
-                <h2>About Me</h2>
-                <p>
-                    I'm a detail-oriented Full Stack Java Developer with strong expertise in backend 
-                    development using Java and Spring Boot, combined with modern frontend technologies 
-                    like HTML5, CSS3, and JavaScript. I specialize in building responsive, scalable web 
-                    applications and REST APIs with MySQL database integration.
-                </p>
-                <div class="about-highlights">
-                    <div class="highlight-item">
-                        <span class="highlight-icon">📚</span>
-                        <div>
-                            <h4>Education</h4>
-                            <p>B.Sc Information Technology<br>Sabarmati University (2021-2024)</p>
-                        </div>
-                    </div>
-                    <div class="highlight-item">
-                        <span class="highlight-icon">💼</span>
-                        <div>
-                            <h4>Experience</h4>
-                            <p>Front-End Web Developer Intern<br>Alpha Developer Team</p>
-                        </div>
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-grid" aria-hidden="true"></div>
+            <div class="hero-content">
+                <div class="hero-copy reveal">
+                    <p class="eyebrow"><span></span> Available for opportunities</p>
+                    <h1>I build web experiences that <em>work beautifully.</em></h1>
+                    <p class="hero-subtitle">I'm Pratik Joshi, a Full Stack Java Developer focused on responsive interfaces, clean backend systems, and useful digital products.</p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">Explore my work <i data-lucide="arrow-down-right"></i></a>
+                        <a href="Pratik%20Joshi.pdf" target="_blank" class="text-link">Resume <i data-lucide="download"></i></a>
                     </div>
                 </div>
-            </div>
-            <div class="about-stats">
-                <div class="stat-card">
-                    <h3>2+</h3>
-                    <p>Projects Completed</p>
-                </div>
-                <!-- <div class="stat-card">
-                    <h3>100%</h3>
-                    <p>Client Satisfaction</p>
-                </div> -->
-                <div class="stat-card">
-                    <h3>1+</h3>
-                    <p>Years Experience</p>
+                <div class="hero-portrait reveal reveal-delay">
+                    <div class="portrait-frame"><img src="PP.png" alt="Portrait of Pratik Joshi"></div>
+                    <div class="portrait-note"><span>Based in</span><strong>Chhatrapati Sambhajinagar, IN</strong></div>
+                    <div class="portrait-mark">01</div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+            <div class="hero-bottom"><p>Scroll to discover</p><span></span><p>Full Stack Developer</p></div>
+        </section>
 
-<!-- Contact Section -->
-<section id="contact" class="contact">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-badge">Let's Connect</span>
-            <h2>Get In Touch</h2>
-            <p>I'm always open to new opportunities and collaborations</p>
-        </div>
-
-        <div class="contact-content">
-            <div class="contact-card">
-                <div class="contact-icon">✉️</div>
-                <h3>Email</h3>
-                <a href="mailto:pratikjoshi0068@gmail.com">pratikjoshi0068@gmail.com</a>
+        <section id="projects" class="projects section">
+            <div class="container">
+                <div class="section-intro reveal">
+                    <p class="eyebrow"><span></span> Selected work</p>
+                    <div><h2>Projects with purpose.</h2><p>Thoughtful interfaces, practical interactions, and an eye for how a product feels in use.</p></div>
+                </div>
+                <article class="project-card reveal">
+                    <a class="project-image project-image--game" href="https://joshipratik06.github.io/2dmobiledestop/" target="_blank" aria-label="Open 2D Car Racing Game live demo"><img src="photo.png" alt="2D Car Racing Game preview"><span class="image-link"><i data-lucide="arrow-up-right"></i></span></a>
+                    <div class="project-content"><p class="project-index">01 / 02</p><div class="project-title-row"><h3>2D Car Racing Game</h3><span>2025</span></div><p>An energetic browser racing game with responsive controls, dynamic obstacles, and multiple difficulty levels built for desktop and mobile play.</p><div class="project-meta"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div><div class="project-links"><a href="https://joshipratik06.github.io/2dmobiledestop/" target="_blank">Live demo <i data-lucide="arrow-up-right"></i></a><a href="https://github.com/JoshiPratik06/2dmobiledestop" target="_blank">Source <i data-lucide="github"></i></a></div></div>
+                </article>
+                <article class="project-card project-card-reverse reveal">
+                    <a class="project-image project-image--tandoori" href="https://pratik-restaurants.vercel.app/" target="_blank" aria-label="Open Tandoori Tales live demo"><img src="Tandoori Tales.png" alt="Tandoori Tales restaurant website preview"><span class="image-link"><i data-lucide="arrow-up-right"></i></span></a>
+                    <div class="project-content"><p class="project-index">02 / 02</p><div class="project-title-row"><h3>Tandoori Tales</h3><span>2025</span></div><p>A full-stack restaurant web experience featuring a modern React + Tailwind frontend, secure authentication, payment integration, and MongoDB-backed order management.</p><div class="project-meta"><span>React.js</span><span>Tailwind CSS</span><span>Vite</span><span>Node.js</span><span>Express.js</span><span>MongoDB Atlas</span><span>Mongoose</span><span>Axios</span><span>JWT</span><span>bcryptjs</span><span>Razorpay</span><span>QRCode</span><span>GitHub</span><span>Vercel</span><span>Render</span></div><div class="project-links"><a href="https://pratik-restaurants.vercel.app/" target="_blank">Live demo <i data-lucide="arrow-up-right"></i></a><a href="https://github.com/JoshiPratik06/PratikRestaurants" target="_blank">Source <i data-lucide="github"></i></a></div></div>
+                </article>
             </div>
-            <div class="contact-card">
-                <div class="contact-icon">💼</div>
-                <h3>LinkedIn</h3>
-                <a href="https://www.linkedin.com/in/pratik-joshi-09b52a325/" target="_blank">Connect with me</a>
+        </section>
+
+        <section id="skills" class="skills section">
+            <div class="container"><div class="section-intro reveal"><p class="eyebrow"><span></span> Toolkit</p><div><h2>Built to move from idea to implementation.</h2><p>Tools I use to create useful, well-structured web applications.</p></div></div>
+                <div class="skills-grid"><div class="skill-card reveal"><span class="skill-number">01</span><i data-lucide="braces"></i><h3>Java</h3><p>Object-oriented backend development and application logic.</p></div><div class="skill-card reveal"><span class="skill-number">02</span><i data-lucide="layers-3"></i><h3>Spring Boot</h3><p>REST APIs and dependable service-layer architecture.</p></div><div class="skill-card reveal"><span class="skill-number">03</span><i data-lucide="layout-template"></i><h3>Frontend</h3><p>Semantic HTML, responsive CSS, and interactive JavaScript.</p></div><div class="skill-card reveal"><span class="skill-number">04</span><i data-lucide="database"></i><h3>MySQL</h3><p>Structured data modeling and database integration.</p></div></div>
             </div>
-            <div class="contact-card">
-                <div class="contact-icon">💻</div>
-                <h3>GitHub</h3>
-                <a href="https://github.com/JoshiPratik06" target="_blank">View my code</a>
-            </div>
-        </div>
+        </section>
 
-        <div class="cta-buttons">
-            <a href="mailto:pratikjoshi0068@gmail.com" class="btn btn-primary">Send Me an Email</a>
-            <a href="pratik joshi.pdf" target="_blank" class="btn btn-secondary">Download Resume</a>
-        </div>
-    </div>
-</section>
+        <section id="about" class="about section"><div class="container about-layout"><div class="about-copy reveal"><p class="eyebrow"><span></span> A little about me</p><h2>Curious by default. Detail-oriented by practice.</h2><p>I'm a Full Stack Java Developer with a focus on clean, scalable applications. I enjoy connecting a considered interface with a reliable backend, so the experience feels simple for the people using it.</p><a href="#contact" class="text-link">Start a conversation <i data-lucide="arrow-up-right"></i></a></div><div class="about-details reveal"><div class="detail-row"><i data-lucide="graduation-cap"></i><div><p>Education</p><h3>B.Sc. Information Technology</h3><span>Sabarmati University, 2021-2024</span></div></div><div class="detail-row"><i data-lucide="briefcase-business"></i><div><p>Experience</p><h3>Front-End Web Developer Intern</h3><span>Alpha Developer Team</span></div></div></div></div></section>
 
-<!-- Footer -->
-<footer class="footer">
-    <div class="container">
-        <p>&copy; 2026 Pratik Joshi. All rights reserved.</p>
-        <div class="footer-links">
-            <a href="https://github.com/JoshiPratik06" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/pratik-joshi-09b52a325/" target="_blank">LinkedIn</a>
-        </div>
-    </div>
-</footer>
-
-<script src="script.js"></script>
+        <section id="contact" class="contact section"><div class="container contact-wrap reveal"><p class="eyebrow"><span></span> Get in touch</p><h2>Looking for a developer<br>who can build with purpose?</h2><p class="contact-description">This portfolio is designed for companies, recruiters, and hiring teams to learn more about my background, skills, and projects.</p><a class="contact-email" href="mailto:pratikjoshi0068@gmail.com">pratikjoshi0068@gmail.com <i data-lucide="arrow-up-right"></i></a><div class="contact-footer"><p>Interested in discussing opportunities, technical fit, or a potential role.</p><div><a href="https://github.com/JoshiPratik06" target="_blank">GitHub</a><a href="https://www.linkedin.com/in/pratik-joshi-09b52a325/" target="_blank">LinkedIn</a></div></div></div></section>
+    </main>
+    <footer class="footer"><div class="container"><p>© 2026 Pratik Joshi</p><p>Designed & built By Pratik Joshi.</p></div></footer>
 </body>
 </html>
